@@ -1,15 +1,17 @@
 import React, {Component} from 'react';
 import './App.css';
-import ClickCounterTwo from './components/ClickCounterTwo';
-import HoverCounterTwo from './components/HoverCounterTwo';
+import ComponentC from './components/ComponentC';
+import { UserProvider } from './components/userContext';
 
 class App extends Component {
   rconst
 render() {
   return (
     <div className="App">
-     <ClickCounterTwo />
-     <HoverCounterTwo />
+      <UserProvider value="Kennedy">
+         <ComponentC />
+      </UserProvider>
+    
     </div>
   )
 }
